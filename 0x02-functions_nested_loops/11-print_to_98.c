@@ -1,29 +1,36 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * print_to_98 - prints all the natural numbers from n to 98
- *
- * @n: interger to be tested
- * Return: list of numbers
+ * print_to_98 - Prints to 98
+ * @n: Start number
  */
 void print_to_98(int n)
 {
-	int i;
-
-	if (n <= 98)
+	if (n < 98)
 	{
-		for (i = n; i < 98; i++)
+		for (; n <= 98; n++)
 		{
-			printf("%i, ", i);
+			printf("%d", n);
+			if (n < 98)
+			{
+				printf(", ");
+			}
+		}
+	}
+	else if (n > 98)
+	{
+		for (; n >= 98; n--)
+		{
+			printf("%d", n);
+			if (n > 98)
+			{
+				printf(", ");
+			}
 		}
 	}
 	else
 	{
-		for (i = n; i > 98; i--)
-		{
-			printf("%i, ", i);
-		}
+		printf("98");
 	}
-	printf("98\n");
+	printf("\n");
 }
